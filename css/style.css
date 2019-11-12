@@ -1,0 +1,460 @@
+/* main styles */
+:root {
+    --green: #25A067;
+    --dark-green: #004719;
+    --light-green: #85caaa;
+    --yellow: #FFCC32;
+    --darkYellow: #FFBF00;
+    --text-color: #434343;
+    --white: #ffffff;
+    --transparentWhite: #ffffff73;
+    --moreTransparentWhite: #ffffff44;
+    --shadow: #00000030;
+    --transparentBlack: #00000009;
+    --grey: #EFEFEF;
+}
+
+@font-face {
+    font-family: 'Arla';
+    src: url(../files/fonts/ArlaIF_W_Rg.eot);
+    /* IE9 Compat Modes */
+    src: url(../files/fonts/ArlaIF_W_Rg.ttf) format('truetype'),
+        /* Safari, Android, iOS */
+        url(../files/fonts/ArlaIF_W_Rg.woff) format('woff');
+    /* Pretty Modern Browsers */
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Arla';
+
+}
+
+.button {
+    background-color: var(--yellow);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+}
+
+.btn-hover:hover {
+    color: var(--white);
+    background-color: var(--darkYellow);
+}
+
+.survey-part .btn-hover:hover {
+    color: var(--white);
+    background-color: var(--darkYellow);
+}
+
+.center {
+    text-align: center;
+}
+
+/* --------  Dashboard page  ---------- */
+.dashboard-container {
+    position: relative;
+}
+
+.dashboard-container::before {
+    content: '';
+    background-image: url(../files/images/header-waves.svg);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-80%);
+    z-index: -1;
+}
+
+.dashboard-container h1 {
+    position: absolute;
+    top: 30px;
+    color: var(--white);
+    left: 16px;
+}
+
+.padding-container {
+    padding: 150px 16px 16px 16px;
+}
+
+.carbon-footprint {
+    background-color: var(--light-green);
+    padding: 20px 5px;
+    border-radius: 10px;
+}
+
+.dashboard-container .arrow {
+    align-self: center;
+    justify-self: end;
+}
+
+.dashboard-container .small-arrow {
+    height: 25px;
+}
+
+/* survey button */
+.survey-part .survey-button {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    width: 100%;
+    background-color: var(--yellow);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 15px 15px;
+    margin: 15px 0;
+}
+
+.survey-part .survey-info {
+    font-size: 18px;
+    font-weight: 700;
+    align-self: center;
+}
+
+/* outputs section */
+.carbonFootprint {
+    color: var(--white);
+    margin: 10px 10px;
+}
+
+.carbon-footprint:hover {
+    background-color: var(--green);
+}
+
+.carbonChart {
+    max-height: 400px;
+    cursor: pointer;
+}
+
+.canvas-carbon-footprint {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.outputs .card {
+    background-color: var(--light-green);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    filter: drop-shadow(2px 2px 3px var(--shadow));
+}
+
+.outputs .card:hover {
+    background-color: var(--green);
+    text-decoration: none;
+}
+
+.outputs .card-bck {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+}
+
+.outputs .card-info {
+    color: var(--white);
+}
+
+.outputs .output-number {
+    font-size: 35px;
+}
+
+.arrow-indicator {
+    width: 30px;
+    height: auto;
+    align-self: center;
+    justify-self: start;
+}
+
+.outputs .carbon-footprint-arrow {
+    padding-right: 10px;
+}
+
+/* certificate section */
+.certificate {
+    margin: 30px 0 80px 0;
+}
+
+.certificate .grey-card {
+    background-color: var(--grey);
+    border-radius: 10px;
+    padding: 15px;
+    filter: drop-shadow(2px 2px 3px var(--shadow));
+}
+
+.certificate .certificate-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.certificate .green-color {
+    color: var(--green);
+}
+
+.certificate .center {
+    margin-top: 1.5rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* ranking section */
+.ranking {
+    color: var(--white);
+    background-color: var(--green);
+    padding: 16px;
+    position: relative;
+}
+
+.ranking::before {
+    content: '';
+    background-image: url(../files/images/bottom-waves.svg);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: -23px;
+    left: 0;
+    transform: translateY(-57%)
+}
+
+.ranking-button {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.see-ranking {
+    justify-self: end;
+    color: white;
+    margin-left: 10px;
+}
+
+.see-ranking:hover {
+    color: var(--transparentWhite);
+}
+
+.your-ranking {
+    background-color: var(--white);
+    color: var(--text-color);
+    border-radius: 5px;
+    display: grid;
+    padding: 16px;
+    grid-template-columns: auto auto auto;
+    margin: 10px 0px;
+}
+
+.rank-place {
+    align-self: center;
+    justify-self: center;
+}
+
+.rank-place-number {
+    text-align: center;
+}
+
+.size {
+    font-size: 25px;
+}
+
+.rank-place-heading {
+    text-align: center;
+}
+
+.rank-name {
+    align-self: center;
+    justify-self: center;
+}
+
+.rank-carbon {
+    align-self: center;
+    justify-self: center;
+}
+
+.ranking-categories {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto auto auto;
+    color: var(--transparentWhite);
+    padding-left: 1rem;
+}
+
+.top-5 {
+    border-radius: 5px;
+    padding: 7px;
+    margin: 7px 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.color-one {
+    background-color: var(--transparentWhite);
+}
+
+.color-two {
+    background-color: var(--moreTransparentWhite);
+}
+
+.profileImgSimon {
+    border-radius: 50%;
+    height: 50px;
+}
+
+.profileImg {
+    border-radius: 50%;
+    height: 30px;
+}
+
+.ranking .desktop-ranking {
+    display: none;
+}
+
+.ranking-categories-desktop {
+    display: none;
+}
+
+.ranking .name {
+    justify-self: center;
+}
+
+.ranking .region,
+.ranking .carbon {
+    justify-self: end;
+}
+
+/* --------------------- media queries -------------------- */
+@media only screen and (min-width: 768px) {
+    .outputs .card-bck-carbon {
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+    }
+
+    .survey-part .survey-button {
+        grid-template-columns: 90% 10%;
+        max-width: 50%;
+    }
+
+    .responsive-outputs {
+        display: grid;
+        grid-column-gap: 4%;
+        grid-template-columns: 48% 48%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .padding-container {
+        padding: 150px 30px 20px 30px;
+    }
+
+    .certificate .certificate-grid {
+        grid-template-columns: 40% 40% 20%;
+    }
+
+    .certificate .center {
+        grid-column: 3;
+    }
+
+    .certificate-p {
+        padding: 5px;
+    }
+
+    .ranking {
+        padding: 30px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .padding-container {
+        padding: 180px 110px 50px 110px;
+    }
+
+    .menu-icons {
+        text-align: center;
+        width: 40px;
+    }
+
+    main {
+        margin-left: 120px;
+    }
+
+    .dashboard-container h1 {
+        left: 16px;
+    }
+
+    .ranking {
+        padding: 30px 110px;
+    }
+
+    .grid-ranking {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 2%;
+    }
+
+    .ranking .desktop-ranking {
+        display: grid;
+    }
+
+    .ranking .mobile-ranking {
+        display: grid;
+    }
+
+}
+
+/* --------  output subpages page  ---------- */
+.output-page .green-background {
+    background-color: #25A067;
+    padding-bottom: 50px;
+}
+
+.output-page .improve-sustainability {
+    margin: 20px 15px;
+}
+
+.output-page .waves-footprint {
+    content: '';
+    background-image: url(../files/images/waves-img.svg);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 50px;
+}
+
+.output-page .infographs {
+    width: 100%;
+}
+
+.output-page .infographs img {
+    display: block;
+    width: 100%;
+}
+
+.output-page .chart-title {
+    color: white;
+    padding: 20px 20px;
+}
+
+/* --------------------- media queries -------------------- */
+@media only screen and (min-width: 550px) {
+    .output-page .infographs img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+}
+
+/* --------  End of output subpages page  ---------- */

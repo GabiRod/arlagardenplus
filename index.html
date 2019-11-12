@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Arla Garden Plus | Dashboard</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/reboot.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mobile menu -->
+    <div class="navbar-mobile-wrapper">
+        <nav class="navbar-mobile">
+            <a href="#dashboard" onclick="handleMenuItemClick('dashboard')"><img class="arla-logo"
+                    src="files/images/arla-logo.svg" alt="Arla logo"></a>
+            <div id="menu-button" class="menu-button">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ol id="navbar-list-mobile" class="navbar-list set-active">
+                <li>
+                    <a href="#dashboard" onclick="handleMenuItemClick('dashboard')">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Survey</a>
+                </li>
+                <li>
+                    <a href="#">Ranking</a>
+                </li>
+                <li class="logout">
+                    <a href="#">Logout</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Desktop menu -->
+    <header class="header">
+        <nav class="navbar-desktop">
+            <a href="#dashboard" onclick="showPage('dashboard')"><img class="arla-logo" src="files/images/arla-logo.svg"
+                    alt="Arla logo"></a>
+            <ol class="navbar-list-desktop set-active">
+                <li>
+                    <a href="#dashboard" onclick="showPage('dashboard')"><img class="menu-icons"
+                            src="files/images/menu-icons/dashboard-icon.svg" alt=""> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><img class="menu-icons" src="files/images/menu-icons/survey-icon.svg" alt="">Survey</a>
+                </li>
+                <li>
+                    <a href="#"><img class="menu-icons" src="files/images/menu-icons/ranking-icon.svg"
+                            alt="">Ranking</a>
+                </li>
+                <li>
+                    <a href="#" class="logout-desktop">
+                        <img class="menu-icons logout-img" src="files/images/menu-icons/log-out.svg" alt="">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Dashboard Page -->
+        <section id="dashboard" class="dashboard-container page">
+            <div class="padding-container">
+                <h1>Dashboard</h1>
+                <section class="survey-part">
+                    <h2>Survey</h2>
+                    <a href="#" class="survey-button btn-hover">
+                        <span class="survey-info">10/50 questions done</span>
+                        <img class="arrow small-arrow" src="files/images/arrow.png" alt="">
+                    </a>
+                </section>
+                <h2>Overview</h2>
+
+                <section class="outputs">
+                    <div class="carbon-footprint">
+                        <a href="#carbon-footprint-page" onclick="showPage('carbon-footprint-page')"
+                            class="card-bck card-bck-carbon">
+                            <div class="canvas-carbon-footprint">
+                                <canvas class="carbonChart"></canvas>
+                            </div>
+                            <div class="card-info carbonFootprint">
+                            </div>
+                            <svg class="arrow-indicator footprint-arrow" xmlns="http://www.w3.org/2000/svg"
+                                width="12.745" height="8.5" viewBox="0 0 12.745 8.5">
+                                <path class="indicator-path" data-name="Icon ionic-ios-arrow-round-forward"
+                                    d="M16,11.414a.578.578,0,0,0,0,.815l2.691,2.7H8.446a.575.575,0,0,0,0,1.151H18.685l-2.691,2.7a.583.583,0,0,0,0,.815.573.573,0,0,0,.81,0l3.648-3.674h0a.646.646,0,0,0,.12-.181.549.549,0,0,0,.044-.221.577.577,0,0,0-.164-.4l-3.648-3.674A.564.564,0,0,0,16,11.414Z"
+                                    transform="translate(-7.875 -11.252)" />
+                            </svg>
+                            <img class="arrow carbon-footprint-arrow" src="files/images/arrow.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="responsive-outputs">
+                        <div class="diesel card">
+                            <a href="#diesel" onclick="showPage('diesel')" class="card-bck">
+                                <div class="card-info dieselData">
+
+                                </div>
+                                <svg class="arrow-indicator diesel-arrow" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 12.745 8.5">
+                                    <path class="indicator-path" data-name="Icon ionic-ios-arrow-round-forward"
+                                        d="M16,11.414a.578.578,0,0,0,0,.815l2.691,2.7H8.446a.575.575,0,0,0,0,1.151H18.685l-2.691,2.7a.583.583,0,0,0,0,.815.573.573,0,0,0,.81,0l3.648-3.674h0a.646.646,0,0,0,.12-.181.549.549,0,0,0,.044-.221.577.577,0,0,0-.164-.4l-3.648-3.674A.564.564,0,0,0,16,11.414Z"
+                                        transform="translate(-7.875 -11.252)" />
+                                </svg>
+                                <img class="arrow" src="files/images/arrow.png" alt="">
+                            </a>
+                        </div>
+                        <div class="electricity card">
+                            <a href="#electricity" onclick="showPage('electricity')" class="card-bck">
+                                <div class="card-info electricityData">
+
+                                </div>
+                                <svg class="arrow-indicator electricity-arrow" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 12.745 8.5">
+                                    <path class="indicator-path" data-name="Icon ionic-ios-arrow-round-forward"
+                                        d="M16,11.414a.578.578,0,0,0,0,.815l2.691,2.7H8.446a.575.575,0,0,0,0,1.151H18.685l-2.691,2.7a.583.583,0,0,0,0,.815.573.573,0,0,0,.81,0l3.648-3.674h0a.646.646,0,0,0,.12-.181.549.549,0,0,0,.044-.221.577.577,0,0,0-.164-.4l-3.648-3.674A.564.564,0,0,0,16,11.414Z"
+                                        transform="translate(-7.875 -11.252)" />
+                                </svg>
+                                <img class="arrow" src="files/images/arrow.png" alt="">
+                            </a>
+                        </div>
+                        <div class="imported-feed card">
+                            <a href="#" class="card-bck">
+                                <div class="card-info importedFeedData">
+
+                                </div>
+                                <svg class="arrow-indicator imported-feed-arrow" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 12.745 8.5">
+                                    <path class="indicator-path" data-name="Icon ionic-ios-arrow-round-forward"
+                                        d="M16,11.414a.578.578,0,0,0,0,.815l2.691,2.7H8.446a.575.575,0,0,0,0,1.151H18.685l-2.691,2.7a.583.583,0,0,0,0,.815.573.573,0,0,0,.81,0l3.648-3.674h0a.646.646,0,0,0,.12-.181.549.549,0,0,0,.044-.221.577.577,0,0,0-.164-.4l-3.648-3.674A.564.564,0,0,0,16,11.414Z"
+                                        transform="translate(-7.875 -11.252)" />
+                                </svg>
+                                <img class="arrow" src="files/images/arrow.png" alt="">
+                            </a>
+                        </div>
+                        <div class="digestion card">
+                            <a href="#" class="card-bck">
+                                <div class="card-info digestionData">
+
+                                </div>
+                                <svg class="arrow-indicator digestion-arrow" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 12.745 8.5">
+                                    <path class="indicator-path" data-name="Icon ionic-ios-arrow-round-forward"
+                                        d="M16,11.414a.578.578,0,0,0,0,.815l2.691,2.7H8.446a.575.575,0,0,0,0,1.151H18.685l-2.691,2.7a.583.583,0,0,0,0,.815.573.573,0,0,0,.81,0l3.648-3.674h0a.646.646,0,0,0,.12-.181.549.549,0,0,0,.044-.221.577.577,0,0,0-.164-.4l-3.648-3.674A.564.564,0,0,0,16,11.414Z"
+                                        transform="translate(-7.875 -11.252)" />
+                                </svg>
+                                <img class="arrow" src="files/images/arrow.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="certificate">
+                    <h2>Certificate</h2>
+                    <div class="grey-card">
+                        <div class="certificate-grid">
+                            <div class="certificate-p">
+                                <p>Actual CO2 footprint: <span class="green-color"> <br> 5345,65 t CO2</span></p>
+                            </div>
+                            <div class="certificate-p">
+                                <p>Goal: <span class="green-color"> <br> 4000 t CO2</span></p>
+                            </div>
+                            <div class="center">
+                                <a class="button btn-hover see-more" href="#">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="ranking">
+                <h2>Ranking</h2>
+                <div class="ranking-button">
+                    <div> <strong> Your group </strong> - South </div>
+                    <a href="#" class="see-ranking">
+                        See all rankings
+                        <img src="files/images/arrow-indicator.svg" alt="">
+                    </a>
+                </div>
+                <div class="your-ranking">
+                    <div class="rank-place">
+                        <div class="rank-place-heading">Your rank</div>
+                        <div class="rank-place-number size">#3</div>
+                    </div>
+                    <div class="rank-name">
+                        <div class="rank-place-heading"> <img class="profileImgSimon"
+                                src="files/images/simon-portrait.jpg" alt="Profile picture of the user"></div>
+                        <div class="rank-place-number">Simon</div>
+                    </div>
+                    <div class="rank-carbon">
+                        <div class="rank-place-heading">T CO2</div>
+                        <div class="rank-place-number size">8450,45</div>
+                    </div>
+                </div>
+
+                <div class="ranking-categories">
+                    <div class="rank">#</div>
+                    <div class="img"></div>
+                    <div class="name">Name</div>
+                    <div class="region">Region</div>
+                    <div class="carbon">T CO2</div>
+                </div>
+                <div class="grid-ranking">
+                    <div class="mobile-ranking">
+                        <div class="top-5 color-one">
+                            <div class="rank">#1</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Anders</div>
+                            <div class="region">North</div>
+                            <div class="carbon">2465,45</div>
+                        </div>
+                        <div class="top-5 color-two">
+                            <div class="rank">#2</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Kasper</div>
+                            <div class="region">North</div>
+                            <div class="carbon">2964,16</div>
+                        </div>
+                        <div class="top-5 color-one">
+                            <div class="rank">#3</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Simon</div>
+                            <div class="region">North</div>
+                            <div class="carbon">3225,45</div>
+                        </div>
+                        <div class="top-5 color-two">
+                            <div class="rank">#4</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Ulric</div>
+                            <div class="region">South</div>
+                            <div class="carbon">3584,57</div>
+                        </div>
+                        <div class="top-5 color-one">
+                            <div class="rank">#5</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Peter</div>
+                            <div class="region">North</div>
+                            <div class="carbon">4532,84</div>
+                        </div>
+                    </div>
+
+
+                    <div class="desktop-ranking">
+                        <div class="top-5 color-one">
+                            <div class="rank">#6</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Anders</div>
+                            <div class="region">North</div>
+                            <div class="carbon">2465,45</div>
+                        </div>
+
+                        <div class="top-5 color-two">
+                            <div class="rank">#7</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Kasper</div>
+                            <div class="region">North</div>
+                            <div class="carbon">2964,16</div>
+                        </div>
+
+                        <div class="top-5 color-one">
+                            <div class="rank">#8</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Simon</div>
+                            <div class="region">North</div>
+                            <div class="carbon">3225,45</div>
+                        </div>
+
+                        <div class="top-5 color-two">
+                            <div class="rank">#9</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Ulric</div>
+                            <div class="region">South</div>
+                            <div class="carbon">3584,57</div>
+                        </div>
+
+                        <div class="top-5 color-one">
+                            <div class="rank">#10</div>
+                            <div><img class="profileImg" src="files/images/simon-portrait.jpg"
+                                    alt="Profile picture of the user"></div>
+                            <div class="name">Peter</div>
+                            <div class="region">North</div>
+                            <div class="carbon">4532,84</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Carbon Footprint Page -->
+        <section id="carbon-footprint-page" class="page output-page">
+            <div class="green-background">
+                <h1 class="chart-title">Carbon footprint</h1>
+                <canvas class="carbonChart"></canvas>
+            </div>
+            <div class="waves-footprint"></div>
+            <div>
+                <h2 class="improve-sustainability">Improve sustainability</h2>
+                <picture class="infographs">
+                    <source srcset="files/images/carbon-footprint-desktop.svg" media="(min-width: 1024px)">
+                    <img src="files/images/carbon-footprint-infographic.svg" alt="" />
+                </picture>
+            </div>
+        </section>
+
+        <!-- Diesel Page -->
+        <section id="diesel" class="page output-page">
+            <div class="green-background">
+                <h1 class="chart-title">Diesel</h1>
+                <canvas class="dieselChart"></canvas>
+            </div>
+            <div class="waves-footprint"></div>
+            <div>
+                <h2 class="improve-sustainability">Improve sustainability</h2>
+                <picture class="infographs">
+                    <source srcset="files/images/fuel-infographic-desktop.svg" media="(min-width: 1024px)">
+                    <img src="files/images/fuel-inforaphic.svg" alt="" />
+                </picture>
+            </div>
+        </section>
+
+        <!-- Electricity Page -->
+        <section id="electricity" class="page output-page">
+            <div class="green-background">
+                <h1 class="chart-title">Electricity</h1>
+                <canvas class="electricityChart"></canvas>
+            </div>
+            <div class="waves-footprint"></div>
+            <div>
+                <h2 class="improve-sustainability">Improve sustainability</h2>
+                <picture class="infographs">
+                    <source srcset="files/images/electricity-infographic-desktop_2.png" media="(min-width: 1024px)">
+                    <img src="files/images/electricity-infographic.png" alt="" />
+                </picture>
+            </div>
+        </section>
+    </main>
+    <!-- Firebase App SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <!-- load firebase config -->
+    <script src="js/firebase_config.js"></script>
+    <!-- load main js file -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
